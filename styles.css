@@ -628,7 +628,7 @@ img {
     background-color: #007bc9;
     width: .1rem;
     height: 100%;
-    z-index: 400;
+    z-index: 100;
     top: 0;
     left: -10px;
     left: -1rem;

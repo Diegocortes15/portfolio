@@ -731,11 +731,6 @@ img {
     left: -8rem;
 }
 
-.project--web {
-    height: 16rem;
-}
-
-
 .about {
     background: rgb(4, 12, 19);
     background: linear-gradient(180deg, #000616 0%, #00060d 88%, #000616 100%);

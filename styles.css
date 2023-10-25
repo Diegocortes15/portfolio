@@ -109,12 +109,13 @@ img {
 }
 
 .nav-bar {
-    padding: 2rem 2.5rem;
+    padding: 1rem 1.5rem;
     position: absolute;
     display: flex;
     min-width: 100%;
     z-index: 1000;
     justify-content: space-between;
+    align-items: center;
     background: #00070e;
     overflow: hidden;
     transition: all .5s;
@@ -201,6 +202,7 @@ img {
     position: relative;
     display: none;
     z-index: 1500;
+    color: white;
 }
 
 .navigation__button:hover {
@@ -342,6 +344,8 @@ img {
     background-size: 225%;
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, transparent 0%);
     transition: all .3s;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
 }
 
 .nav-bar__list--link:hover,
@@ -721,6 +725,11 @@ picture {
         display: flex;
         justify-content: center;
         margin-left: 10rem !important;
+    }
+
+    .project__meta {
+        margin-bottom: 4.5rem;
+        left: -8rem;
     }
 
     .project--web {

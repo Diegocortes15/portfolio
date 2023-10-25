@@ -111,3 +111,14 @@ const projectObserver = new IntersectionObserver((entries) => {
 });
 const projectsHidden = document.querySelectorAll(".project-hidden");
 projectsHidden.forEach((project) => projectObserver.observe(project));
+
+const navigationMobileLinks = document.querySelectorAll(
+  ".nav-mobile__list--link"
+);
+const navigationCheckbox = document.querySelector("#navigation__toggle");
+
+navigationMobileLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navigationCheckbox.checked = false;
+  });
+});

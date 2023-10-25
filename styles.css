@@ -133,6 +133,7 @@ img {
 
 @media screen and (max-width: 768px) {
     .nav-bar {
+        padding: 2rem 2rem;
         position: fixed;
     }
 }
@@ -351,10 +352,6 @@ img {
 .nav-bar__list--link:hover,
 .nav-bar__list--link:active,
 .nav-bar__list--link:focus {
-    /*outline: none;
-    background-color: white;
-    box-shadow: 0 1rem 2rem #0095c7;
-    transform: rotate(5deg) scale(1.1);*/
     background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 0%);
     outline: none;
     background-position: 100%;
@@ -544,10 +541,10 @@ img {
 .section-mark--automation::before {
     position: absolute;
     content: "SDET";
-    top: -8rem;
+    top: -12rem;
     right: -1rem;
     font-size: 27rem;
-    color: #02101c;
+    color: #0c2a43;
     font-weight: 700;
 }
 
@@ -557,7 +554,7 @@ img {
     top: -30rem;
     right: -1rem;
     font-size: 27rem;
-    color: #041c31;
+    color: #0c2a43;
     font-weight: 700;
 }
 
@@ -568,8 +565,12 @@ img {
         font-size: 10rem;
     }
 
+    .section-mark--automation::before {
+        top: -13rem;
+    }
+
     .section-mark--web::before {
-        top: -12rem;
+        top: -13rem;
     }
 }
 
@@ -689,10 +690,6 @@ img {
     border-radius: inherit;
 }
 
-picture {
-    perspective: 700px;
-}
-
 .project__framework-icon {
     position: absolute;
     pointer-events: none;
@@ -725,16 +722,17 @@ picture {
         display: flex;
         justify-content: center;
         margin-left: 10rem !important;
+        transform: none;
     }
+}
 
-    .project__meta {
-        margin-bottom: 4.5rem;
-        left: -8rem;
-    }
+.project__meta {
+    margin-bottom: 4.5rem;
+    left: -8rem;
+}
 
-    .project--web {
-        height: 16rem;
-    }
+.project--web {
+    height: 16rem;
 }
 
 
@@ -812,7 +810,6 @@ picture {
 }
 
 .code--string {
-    color: #eeff17;
     color: #00ff4c;
     display: inline;
     overflow-wrap: break-word;
@@ -879,7 +876,7 @@ picture {
 }
 
 .contact-list__item--link {
-    color: #007bc9;
+    color: hwb(193 0% 21%);
     font-size: 2rem;
 }
 

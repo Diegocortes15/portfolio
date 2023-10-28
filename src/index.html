@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Cortes - QA Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&family=Roboto+Mono&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+
+  <nav class="nav-bar">
+    <div class="nav-bar__background">
+      <video class="nav-bar__background-video" autoplay muted loop>
+        <source src="./video/bg-video-2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <a href="https://github.com/Diegocortes15/" target="_blank" class="nav-bar__brand">
+      <i class="fa-brands fa-github"></i>
+      Diegocortes15
+    </a>
+    <input type="checkbox" class="navigation__checkbox" id="navigation__toggle">
+    <ul class="nav-bar__list">
+      <li class="nav-bar__list--item">
+        <a class="nav-bar__list--link" href="#start">Start</a>
+      </li>
+      <li class="nav-bar__list--item">
+        <a class="nav-bar__list--link" href="#work">Work</a>
+      </li>
+      <li class="nav-bar__list--item">
+        <a class="nav-bar__list--link" href="#about">About</a>
+      </li>
+      <li class="nav-bar__list--item">
+        <a class="nav-bar__list--link" href="#contact">Contact</a>
+      </li>
+    </ul>
+    <label for="navigation__toggle" class="navigation__button">
+      <span class="navigation__icon"></span>
+    </label>
+    <div class="navigation__background">
+      <video class="navigation__background-video" autoplay muted loop>
+        <source src="./video/bg-video-2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <nav class="navigation__mobile">
+      <ul class="nav-mobile__list">
+        <li class="nav-mobile__list--item">
+          <a class="nav-mobile__list--link" href="#start">01 Start</a>
+        </li>
+        <li class="nav-mobile__list--item">
+          <a class="nav-mobile__list--link" href="#work">02 Work</a>
+        </li>
+        <li class="nav-mobile__list--item">
+          <a class="nav-mobile__list--link" href="#about">03 About</a>
+        </li>
+        <li class="nav-mobile__list--item">
+          <a class="nav-mobile__list--link" href="#contact">04 Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </nav>
+
+  <header class="header" id="start">
+    <section class="header__diego">
+      <div class="header__bg-video">
+        <video class="header__bg-video__content" autoplay muted loop>
+          <source src="./video/bg-video-2.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="header__content container">
+        <div class="timeline timeline--alt">
+          <div class="bullet"></div>
+        </div>
+        <div class="section__title">
+          <small>Start</small>
+        </div>
+        <h1 class="margin-bottom-15 header__title">Hi, my name is <span class="primary-color">Diego Cortés</span></h1>
+        <h1 class="margin-bottom-15 header__title">
+          <span class="rol-word">QA Automation Engineer</span>
+          <span class="rol-word">Multimedia Engineer</span>
+          <span class="rol-word">QA Engineer</span>
+        </h1>
+        <p class="margin-top-150 header__title-description">Let me show you...</p>
+      </div>
+      <a href="#work" class="down-arrow" tabindex="0"></a>
+    </section>
+  </header>
+
+  <main class="main">
+    <section class="work section" id="work">
+      <div class="container">
+        <div class="timeline timeline--alt">
+        </div>
+        <div class="section__header">
+          <div class="section__title bullet__title">
+            <small>Work</small>
+          </div>
+          <h2 class="section__title__description">Selected Web &amp; Automation Frameworks...</h2>
+        </div>
+      </div>
+
+      <ul class="section__content projects section-mark--automation">
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-left-300"
+            href="https://github.com/Diegocortes15/selenium-automation-framework-saucedemo" target="_blank">
+            <div class="project__meta">
+              <h3>Selenium<br>Automation<br>Framework</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>00</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__framework-icon" src="./img/selenium-logo.png" alt="selenium" lazy="loaded">
+            <img class="project__sut" src="./img/saucelabs.png" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--mobile margin-top-300"
+            href="https://github.com/Diegocortes15/appium-automation-framework-imdb" target="_blank">
+            <div class="project__meta">
+              <h3>Appium<br>Automation<br>Framework</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>01</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__framework-icon" src="./img/appium-logo.png" alt="selenium" lazy="loaded">
+            <img class="project__sut" src="./img/imdb.jfif" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-top-150"
+            href="https://github.com/Diegocortes15/playwright-automation-framework-saucedemo" target="_blank">
+            <div class="project__meta">
+              <h3>Playwright<br>Automation<br>Framework</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>02</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__framework-icon" src="./img/playwright-logo.png" alt="selenium" lazy="loaded">
+            <img class="project__sut" src="./img/saucelabs.png" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--50-width">
+          <a class="project__box project-hidden project--web margin-top-150"
+            href="https://github.com/Diegocortes15/cypress-wingo-framework" target="_blank">
+            <div class="project__meta">
+              <h3>Cypress<br>Automation<br>Framework</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>03</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__framework-icon" src="./img/cypress-logo.png" alt="selenium" lazy="loaded">
+            <img class="project__sut" src="./img/wingo.png" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--50-width">
+          <a class="project__box project-hidden project--web margin-top-300"
+            href="https://github.com/Diegocortes15/ui-automation-challenge-js" target="_blank">
+            <div class="project__meta">
+              <h3>WebDriverIO<br>Automation<br>Framework</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>04</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__framework-icon" src="./img/webdriverio-logo.png" alt="selenium" lazy="loaded">
+            <img class="project__sut" src="./img/saucelabs.png" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-top-150"
+            href="https://github.com/Diegocortes15/playwright-serenity-automation-framework" target="_blank">
+            <div class="project__meta">
+              <h3>Playwright<br>Serenity JS<br>Automation<br>Framework</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>05</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__framework-icon" src="./img/serenity-js-avatar.png" alt="selenium" lazy="loaded">
+            <img class="project__sut" src="./img/demoqa.png" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+      </ul>
+
+      <ul class="section__content projects section-mark--web margin-top-300">
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-left-300" href="https://intiac.netlify.app/"
+            target="_blank">
+            <div class="project__meta">
+              <h3>Intiac<br>Website</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>00</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__sut" src="./img/intiac.jpg" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-top-400" href="https://forkify-diego.netlify.app/"
+            target="_blank">
+            <div class="project__meta">
+              <h3>Forkify<br>App</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>01</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__sut" src="./img/forky.jpg" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-top-150" href="https://foodapp-diego.netlify.app/"
+            target="_blank">
+            <div class="project__meta">
+              <h3>FoodApp<br>Website</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>02</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__sut" src="./img/foodapp.jpg" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-left-300 margin-top-150"
+            href="https://bankist-diego.netlify.app/" target="_blank">
+            <div class="project__meta">
+              <h3>Bankist<br>Demo</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>03</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__sut" src="./img/bankist.jpg" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-top-500 margin-right-100"
+            href="https://natours-diego.netlify.app/" target="_blank">
+            <div class="project__meta">
+              <h3>Natours<br>Landing</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>04</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__sut" src="./img/natours.jpg" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--33_3-width">
+          <a class="project__box project-hidden project--web margin-top-300"
+            href="https://trillo-project-diego.netlify.app/" target="_blank">
+            <div class="project__meta">
+              <h3>Trillo<br>Landing</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>05</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__sut" src="./img/trillo.jpg" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+        <div class="project project--50-width">
+          <a class="project__box project-hidden project--web margin-left-300 margin-top-150"
+            href="https://nexter-diego.netlify.app/" target="_blank">
+            <div class="project__meta">
+              <h3>Nexter<br>Landing</h3>
+              <div class="divider"></div>
+              <div class="project__nav">
+                <div>06</div>
+                <div class="project_nav--arrow">→</div>
+              </div>
+            </div>
+            <img class="project__sut" src="./img/nexter.jpg" alt="saucelabs" lazy="loaded">
+          </a>
+        </div>
+
+      </ul>
+      <a href="#about" class="down-arrow" tabindex="0"></a>
+    </section>
+
+    <section class="about section" id="about">
+      <div class="container">
+        <div class="timeline"></div>
+        <div class="section__header">
+          <div class="section__title bullet__title">
+            <small>About</small>
+          </div>
+        </div>
+        <div class="section__content">
+          <div class="code-wrap">
+
+            <div data-line-nr="1" class="code--line">
+              <div class="code--methods">class</div>
+              <div class="code--class_name">
+                DiegoCortes
+                <div class="code--bracket--1">{</div>
+              </div>
+            </div>
+
+            <div data-line-nr="2" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--methods">constructor<div class="code--bracket--2">() {</div>
+              </div>
+            </div>
+
+            <div data-line-nr="3" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--scope">this</div>.<div class="code--prop">name</div>
+              <div class="code--math"> = </div>
+              <div class="code--string">'Diego Alejandro Cortes Roa'</div>;
+            </div>
+
+            <div data-line-nr="4" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--scope">this</div>.<div class="code--prop">dayOfBirthstamp</div>
+              <div class="code--math"> = </div>
+              <div class="code--string">991897200</div>;
+            </div>
+
+            <div data-line-nr="5" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--scope">this</div>.<div class="code--prop">email</div>
+              <div class="code--math"> = </div>
+              <div class="code--string">'cortesroadiegoalejandro@gmail.com'</div>;
+            </div>
+
+            <div data-line-nr="6" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--bracket--2">}</div>
+            </div>
+
+            <div data-line-nr="7" class="code--line">&nbsp;</div>
+
+            <div data-line-nr="8" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--mthd">workExperience<div class="code--bracket--2">() {</div>
+              </div>
+            </div>
+
+            <div data-line-nr="9" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--methods">return</div>
+              <div class="code--bracket--3">[</div>
+            </div>
+
+            <div data-line-nr="10" class="code--line">
+              <div class="code--dot">······</div>
+              <div class="code--bracket--1">{</div>
+              <div class="code--string">'July 2022 - January 2023'</div> : <div class="code--string">'Testing
+                Intern at Endava S.A.S.'</div>
+              <div class="code--bracket--1"> }</div>
+            </div>
+
+            <div data-line-nr="11" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--bracket--3">]</div>
+            </div>
+
+            <div data-line-nr="12" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--bracket--2">}</div>
+            </div>
+
+            <div data-line-nr="13" class="code--line">&nbsp;</div>
+
+            <div data-line-nr="14" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--mthd">education<div class="code--bracket--2">() {</div>
+              </div>
+            </div>
+
+            <div data-line-nr="15" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--methods">return</div>
+              <div class="code--bracket--3">[</div>
+            </div>
+
+            <div data-line-nr="16" class="code--line">
+              <div class="code--dot">······</div>
+              <div class="code--bracket--1">{ </div>
+              <div class="code--string">'2020 - 2021'</div> : <div class="code--string">'Udemy - Advanced CSS and Sass:
+                Flexbox, Grid, Animations and More!'
+              </div>
+              <div class="code--bracket--1"> },</div>
+            </div>
+
+            <div data-line-nr="17" class="code--line">
+              <div class="code--dot">······</div>
+              <div class="code--bracket--1">{ </div>
+              <div class="code--string">'2021'</div> : <div class="code--string">'Scrum Network - Scrum Essentials'
+              </div>
+              <div class="code--bracket--1"> },</div>
+            </div>
+
+            <div data-line-nr="18" class="code--line">
+              <div class="code--dot">······</div>
+              <div class="code--bracket--1">{ </div>
+              <div class="code--string">'2021 - 2022'</div> : <div class="code--string">'Udemy - The Complete JavaScript
+                Course
+                2022: From Zero to Expert!'</div>
+              <div class="code--bracket--1"> },</div>
+            </div>
+
+            <div data-line-nr="19" class="code--line">
+              <div class="code--dot">······</div>
+              <div class="code--bracket--1">{ </div>
+              <div class="code--string">'2022'</div> : <div class="code--string">'Udemy - WebdriverIO: Complete
+                Beginner Course 2022'</div>
+              <div class="code--bracket--1"> },</div>
+            </div>
+
+            <div data-line-nr="20" class="code--line">
+              <div class="code--dot">······</div>
+              <div class="code--bracket--1">{ </div>
+              <div class="code--string">'2022'</div> : <div class="code--string">'Perficient Latin America - QA
+                Automation Bootcamp'</div>
+              <div class="code--bracket--1"> },</div>
+            </div>
+
+            <div data-line-nr="21" class="code--line">
+              <div class="code--dot">······</div>
+              <div class="code--bracket--1">{ </div>
+              <div class="code--string">'2016 - 2023'</div> : <div class="code--string">'Universidad Militar Nueva
+                Granada - Bachelor of Multimedia Engineer'</div>
+              <div class="code--bracket--1"> },</div>
+            </div>
+
+            <div data-line-nr="22" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--bracket--3">]</div>
+            </div>
+
+            <div data-line-nr="23" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--bracket--2">}</div>
+            </div>
+
+            <div data-line-nr="24" class="code--line">&nbsp;</div>
+
+            <div data-line-nr="25" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--mthd">skills<div class="code--bracket--2">() {</div>
+              </div>
+            </div>
+
+            <div data-line-nr="26" class="code--line">
+              <div class="code--dot">····</div>
+              <div class="code--methods">return</div>
+              <div class="code--bracket--3">[</div>
+              <div class="code--string">'HTML/CSS/JS', 'SASS', 'Scrum', 'Confluence', 'JIRA', 'Zephyr',
+                'Java',
+                'TypeScript', 'Selenium 4',
+                'Playwright', 'WebDriverIO', 'Cypress', 'SerenityJS', 'Rest-assured', 'Axios', 'MySQL', 'SQL', 'Git',
+                'GitHub', 'OOP', 'Page Object Model', 'Screenplay', 'GitHub Actions', 'Azure Pipelines', 'Jenkins',
+                'Docker'</div>
+              <div class="code--bracket--3"> <span class="cursor"></span> ]</div>
+            </div>
+
+            <div data-line-nr="27" class="code--line">
+              <div class="code--dot">··</div>
+              <div class="code--bracket--2">}</div>
+            </div>
+
+            <div data-line-nr="28" class="code--line">
+              <div class="code--bracket--1">}</div>
+            </div>
+
+            <div data-line-nr="29" class="code--line">&nbsp;</div>
+
+          </div>
+        </div>
+      </div>
+      <a href="#contact" class="down-arrow" tabindex="0"></a>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="footer__content container">
+      <div class="timeline"></div>
+      <div class="section__header">
+        <div class="section__title bullet__title">
+          <small>Contact</small>
+        </div>
+      </div>
+      <div class="section__content footer__social-content">
+        <h2 class="footer__social-title">Find me on:</h2>
+        <ul class="contact-list">
+          <a class="contact-list__item--link" href="https://www.linkedin.com/in/diegocortesroa/" target="_blank">
+            <li class="contact-list__item">
+              <i class="fa-brands fa-linkedin-in contact-list__item--icon"></i>
+              in/diegocortesroa/
+          </a>
+          </li class="contact-list__item">
+          <li class="contact-list__item">
+            <a class="contact-list__item--link" href="https://github.com/Diegocortes15" target="_blank">
+              <i class="fa-brands fa-github contact-list__item--icon"></i>
+              Diegocortes15
+            </a>
+          </li class="contact-list__item">
+          </li class="contact-list__item">
+        </ul>
+      </div>
+      <div class="copy">
+        <small>© Made by Diego Cortés. Circa 2023.</small>
+      </div>
+    </div>
+  </footer>
+  <div class="screen-cursor">
+    <div class="screen-cursor-dot" data-cursor-dot></div>
+    <div class="screen-cursor-outline" data-cursor-outline></div>
+  </div>
+</body>
+
+</html>

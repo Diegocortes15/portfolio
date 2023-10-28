@@ -168,7 +168,3 @@ navigationMobileLinks.forEach((link) => {
     navigationCheckbox.checked = false;
   });
 });
-
-if (module.hot) {
-  module.hot.accept();
-}

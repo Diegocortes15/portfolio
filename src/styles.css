@@ -208,7 +208,7 @@ img {
     object-fit: cover;
     height: 100vh;
     z-index: -1;
-    background-image: url(./img/bg-image-2.jpg);
+    background-image: url(/src/images/bg-image-2.jpg);
 }
 
 .nav-bar__background-video {
@@ -344,7 +344,7 @@ img {
     height: 100vh;
     z-index: 1100;
     object-fit: cover;
-    background-image: url(./img/bg-image-2.jpg);
+    background-image: url(/src/images/bg-image-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -475,7 +475,7 @@ img {
 .header__bg-video__content {
     height: 100%;
     width: 100%;
-    background-image: url(./img/bg-image-2.jpg);
+    background-image: url(/src/images/bg-image-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     object-fit: cover;

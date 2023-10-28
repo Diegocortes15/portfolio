@@ -6,7 +6,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --dist-dir ./dist",
-    "push-gh-pages": "gh-pages -d dist"
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "keywords": [],
   "author": "Diego Alejandro Cortes Roa",
@@ -14,6 +14,7 @@
   "devDependencies": {
     "autoprefixer": "^10.4.16",
     "parcel": "^2.10.1",
-    "postcss": "^8.4.31"
+    "postcss": "^8.4.31",
+    "push-dir": "^0.4.1"
   }
 }

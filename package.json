@@ -5,7 +5,8 @@
   "default": "index.html",
   "scripts": {
     "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --dist-dir ./dist"
+    "build": "parcel build src/index.html --dist-dir ./dist",
+    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "keywords": [],
   "author": "Diego Alejandro Cortes Roa",

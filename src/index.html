@@ -13,12 +13,20 @@
     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="shortcut icon" href="/src/images/icon.png" type="image/x-icon">
-    <link rel="stylesheet" href="/src/styles.css">
+  <link rel="stylesheet" href="/src/styles.css">
   <script defer src="/src/app.js"></script>
 </head>
 
 <body>
-
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader__box"></div>
+      <div class="preloader__box"></div>
+      <div class="preloader__box"></div>
+      <div class="preloader__box"></div>
+      <div class="preloader__box"></div>
+    </div>
+  </div>
   <nav class="nav-bar">
     <div class="nav-bar__background">
       <video class="nav-bar__background-video" autoplay muted loop>
@@ -201,7 +209,8 @@
                 <div class="project_nav--arrow">→</div>
               </div>
             </div>
-            <img class="project__framework-icon" src="/src/images/serenity-js-avatar.png" alt="serenity-js" lazy="loaded">
+            <img class="project__framework-icon" src="/src/images/serenity-js-avatar.png" alt="serenity-js"
+              lazy="loaded">
             <img class="project__sut" src="/src/images/demoqa.jpg" alt="demoqa" lazy="loaded">
           </a>
         </div>
@@ -524,19 +533,18 @@
       <div class="section__content footer__social-content">
         <h2 class="footer__social-title">Find me on:</h2>
         <ul class="contact-list">
-          <a class="contact-list__item--link" href="https://www.linkedin.com/in/diegocortesroa/" target="_blank">
-            <li class="contact-list__item">
+          <li class="contact-list__item">
+            <a class="contact-list__item--link" href="https://www.linkedin.com/in/diegocortesroa/" target="_blank">
               <i class="fa-brands fa-linkedin-in contact-list__item--icon"></i>
               in/diegocortesroa/
-          </a>
-          </li class="contact-list__item">
+            </a>
+          </li>
           <li class="contact-list__item">
             <a class="contact-list__item--link" href="https://github.com/Diegocortes15" target="_blank">
               <i class="fa-brands fa-github contact-list__item--icon"></i>
               Diegocortes15
             </a>
-          </li class="contact-list__item">
-          </li class="contact-list__item">
+          </li>
         </ul>
       </div>
       <div class="copy">

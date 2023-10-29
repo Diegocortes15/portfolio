@@ -45,6 +45,15 @@ document.addEventListener("mouseout", (e) => {
   }
 });
 
+/** Preloader */
+
+const preloader = document.querySelector("#preloader");
+window.addEventListener("load", function () {
+  setTimeout(() => {
+    preloader.style.display = "none";
+  }, 1000);
+});
+
 /** Words */
 
 const words = document.querySelectorAll(".rol-word");

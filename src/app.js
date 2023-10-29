@@ -112,6 +112,25 @@ function splitLetters(word) {
 changeWord();
 setInterval(changeWord, 6000);
 
+/** Projects Reveal */
+
+const projectObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("project-show");
+      setTimeout(() => {
+        entry.target.classList.remove("project-hidden");
+      }, 500);
+    } else {
+      entry.target.classList.add("project-hidden");
+    }
+  });
+});
+const projectsHidden = document.querySelectorAll(".project-hidden");
+projectsHidden.forEach((project) => projectObserver.observe(project));
+
+/** Project Animation */
+
 const projects = document.querySelectorAll(".project__box");
 
 projects.forEach((project) => {
@@ -155,20 +174,7 @@ projects.forEach((project) => {
   });
 });
 
-const projectObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("project-show");
-      setTimeout(() => {
-        entry.target.classList.remove("project-hidden");
-      }, 500);
-    } else {
-      entry.target.classList.add("project-hidden");
-    }
-  });
-});
-const projectsHidden = document.querySelectorAll(".project-hidden");
-projectsHidden.forEach((project) => projectObserver.observe(project));
+/** Mobile Navigation */
 
 const navigationMobileLinks = document.querySelectorAll(
   ".nav-mobile__list--link"

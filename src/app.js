@@ -117,16 +117,16 @@ projects.forEach((project) => {
     }
 
     animationFrameId = requestAnimationFrame(() => {
-      let yRotation = ((layerX - width / 2) / width) * 25;
-      let xRotation = ((layerY - height / 2) / height) * 25;
+      let yRotation = ((layerX - width / 2) / width) * 30;
+      let xRotation = ((layerY - height / 2) / height) * 30;
 
       if (project.classList.contains("project--mobile")) {
         yRotation = ((layerX - width / 2) / width) * 30;
-        xRotation = (((layerY - height / 2) / height) * 10) / aspectRatio;
+        xRotation = (((layerY - height / 2) / height) * 17) / aspectRatio;
       }
 
       const transformString = `
-        perspective(50rem)
+        perspective(70rem)
         scale3d(1.1, 1.1, 1.1)
         rotateX(${xRotation}deg)
         rotateY(${yRotation}deg)`;
@@ -139,7 +139,10 @@ projects.forEach((project) => {
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
     }
-    project.style.transform = "";
+    project.style.transform = `
+        scale3d(1, 1, 1)
+        rotateX(0deg)
+        rotateY(0deg)`;
   });
 });
 

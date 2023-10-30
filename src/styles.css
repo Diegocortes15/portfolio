@@ -111,32 +111,74 @@ img {
 
 /* Words */
 
+.rol-word__content {
+    height: 8.5rem;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 1050px) {
+    .rol-word__content {
+        height: 13rem;
+    }
+}
+
+@media screen and (max-width: 568px) {
+    .rol-word__content {
+        height: 9rem;
+    }
+}
+
 .rol-word {
-    position: absolute;
-    opacity: 0;
-}
-
-.letter {
-    display: inline-block;
-    position: relative;
-    transform: translateZ(2.5rem);
-    transform-origin: 50% 50% 2.5rem;
-}
-
-.letter.out {
-    transform: rotateX(90deg);
-    transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    display: block;
+    height: 100%;
+    animation: spin-rol_words 15s infinite;
     will-change: transform;
+    overflow: hidden;
 }
 
-.letter.behind {
-    transform: rotateX(-90deg);
+@media screen and (max-width: 1050px) {
+    .rol-word {
+        padding: 1rem 0;
+    }
 }
 
-.letter.in {
-    transform: rotateX(0deg);
-    transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    will-change: transform;
+@keyframes spin-rol_words {
+
+    28% {
+        transform: translateY(0%);
+    }
+
+    30% {
+        transform: translateY(-112%);
+    }
+
+    33.333333% {
+        transform: translateY(-100%);
+    }
+
+    61% {
+        transform: translateY(-100%);
+    }
+
+    63% {
+        transform: translateY(-212%);
+    }
+
+    66.666666% {
+        transform: translateY(-200%);
+    }
+
+    95% {
+        transform: translateY(-200%);
+    }
+
+    97% {
+        transform: translateY(-312%);
+    }
+
+    99.999999% {
+        transform: translateY(-300%);
+    }
 }
 
 /* Preloader */

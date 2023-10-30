@@ -56,7 +56,7 @@ window.addEventListener("load", function () {
 
 /** Words */
 
-const words = document.querySelectorAll(".rol-word");
+/*const words = document.querySelectorAll(".rol-word");
 const wordArray = [];
 let currentWord = 0;
 
@@ -110,7 +110,7 @@ function splitLetters(word) {
 }
 
 changeWord();
-setInterval(changeWord, 6000);
+setInterval(changeWord, 6000);*/
 
 /** Projects Reveal */
 

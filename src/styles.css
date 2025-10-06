@@ -1324,3 +1324,19 @@ img {
     font-size: 1.4rem;
     color: #8e979f;
 }
+
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+video[poster] {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}

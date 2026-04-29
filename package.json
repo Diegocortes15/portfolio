@@ -2,19 +2,30 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Diego Cortes - Portfolio",
-  "default": "index.html",
+  "type": "module",
   "scripts": {
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html --public-url ./ --dist-dir ./dist",
-    "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "Diego Alejandro Cortes Roa",
   "license": "ISC",
+  "dependencies": {
+    "framer-motion": "^11.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "devDependencies": {
-    "autoprefixer": "^10.4.16",
-    "parcel": "^2.10.1",
-    "postcss": "^8.4.31",
-    "push-dir": "^0.4.1"
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^16.0.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "jsdom": "^24.0.0",
+    "typescript": "^5.5.3",
+    "vite": "^5.4.8",
+    "vitest": "^2.0.5"
   }
 }

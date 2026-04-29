@@ -1,0 +1,53 @@
+.about {
+  background: linear-gradient(180deg, #000811 90%, #000408 99%);
+  position: relative;
+}
+
+.codeWrap {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.8rem;
+}
+
+.codeLine {
+  position: relative;
+  z-index: 500;
+  line-height: 1.45;
+}
+
+.codeLine::after {
+  position: absolute;
+  content: attr(data-line-nr);
+  left: -6rem;
+  top: 0;
+  width: 2.4rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.codeDot {
+  display: inline;
+  color: transparent;
+}
+
+.codeMath { color: #ff0062; display: inline; }
+.codeMethods { color: #ff0062; display: inline; }
+.codeClassName { color: #ffcb6b; display: inline; }
+.codeBracket1 { color: #ffd70e; display: inline; }
+.codeBracket2 { color: #cc70d6; display: inline; }
+.codeBracket3 { color: #109ff2; display: inline; }
+.codeScope { color: #ff5370; display: inline; }
+.codeProp { color: #f0716c; display: inline; }
+.codeString { color: #00ff4c; display: inline; overflow-wrap: break-word; }
+.codeMthd { color: #1becdb; display: inline; }
+
+.cursor::before {
+  content: '|';
+  color: white;
+  animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}

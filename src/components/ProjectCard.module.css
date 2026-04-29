@@ -1,0 +1,126 @@
+.project {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.project33 {
+  max-width: 33.333333%;
+  flex: 0 0 33.333333%;
+}
+
+.project50 {
+  max-width: 50%;
+  flex: 0 0 50%;
+}
+
+.projectBox {
+  position: relative;
+  display: block;
+  z-index: 900;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.projectBox::before {
+  background-image: linear-gradient(65deg, hsla(210, 50%, 7%, 0.9), transparent 50%);
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 400;
+  border-radius: inherit;
+}
+
+.projectBox:hover {
+  box-shadow: 0.4rem 2.1rem 4.4rem -1.3rem rgba(0, 0, 0, 0.75);
+  z-index: 950;
+}
+
+.projectBox:focus {
+  outline: none;
+  box-shadow: 0.4rem 2.1rem 4.4rem -1.3rem rgba(0, 0, 0, 0.75);
+  z-index: 950;
+}
+
+.web {
+  min-width: 41rem;
+  height: 23rem;
+}
+
+.mobile {
+  min-width: 23rem;
+  max-height: 41rem;
+}
+
+.meta {
+  position: absolute;
+  pointer-events: none;
+  left: -8rem;
+  bottom: 1rem;
+  margin-bottom: 4.5rem;
+  display: inline-block;
+  z-index: 500;
+  transform: translateZ(4rem);
+  transition: all 0.1s;
+  color: white;
+  line-height: 1.2;
+  font-size: 2rem;
+}
+
+.nav {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 1.6rem;
+}
+
+.navArrow {
+  transition: all 0.4s;
+}
+
+.projectBox:hover .navArrow {
+  transform: translateX(1.5rem);
+}
+
+.sut {
+  object-fit: cover;
+  object-position: center center;
+  min-width: inherit;
+  width: inherit;
+  height: inherit;
+  max-height: inherit;
+  border-radius: inherit;
+}
+
+.frameworkIcon {
+  position: absolute;
+  pointer-events: none;
+  width: 5rem;
+  border-radius: 0.5rem;
+  top: 5rem;
+  right: -1.5rem;
+  z-index: 500;
+  transform: translateZ(3rem);
+}
+
+@media screen and (max-width: 1024px) {
+  .project {
+    max-width: 83.333333%;
+    flex: 0 0 83.333333%;
+    margin: 0 auto;
+  }
+
+  .projectBox {
+    margin: 0 !important;
+    width: 23rem;
+    min-width: 20rem;
+    display: flex;
+    justify-content: center;
+    margin-left: 10rem !important;
+  }
+
+  .web {
+    height: 17rem;
+  }
+}

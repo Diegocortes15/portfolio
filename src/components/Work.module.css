@@ -1,0 +1,64 @@
+.work {
+  background: linear-gradient(180deg, #00070d 0%, #041523 88%, #00070d 99%);
+  overflow: hidden;
+  position: relative;
+}
+
+.projects {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 300;
+  justify-content: center;
+}
+
+.automationMark {
+  position: relative;
+}
+
+.automationMark::before {
+  position: absolute;
+  content: 'SDET';
+  top: -12rem;
+  right: -1rem;
+  font-size: 27rem;
+  color: #0c2a43;
+  font-weight: 700;
+}
+
+.webMark {
+  position: relative;
+  margin-top: 30rem;
+}
+
+.webMark::before {
+  position: absolute;
+  content: 'WEB';
+  top: -30rem;
+  right: -1rem;
+  font-size: 27rem;
+  color: #0c2a43;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1024px) {
+  .automationMark::before,
+  .webMark::before {
+    font-size: 10rem;
+  }
+
+  .automationMark::before {
+    top: -13rem;
+  }
+
+  .webMark::before {
+    top: -13rem;
+  }
+
+  .projects {
+    flex-direction: column;
+    row-gap: 10rem;
+    margin-top: 8rem;
+  }
+}

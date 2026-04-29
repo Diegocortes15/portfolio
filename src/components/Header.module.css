@@ -1,0 +1,81 @@
+.header {
+  overflow: hidden;
+}
+
+.hero {
+  height: 100vh;
+  min-height: 5.6rem;
+  position: relative;
+  background-color: #00070d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgVideoWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.bgVideo {
+  height: 100%;
+  width: 100%;
+  background-image: url(/images/bg-image-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+}
+
+.content {
+  z-index: 200;
+  padding: 0 1.5rem;
+  margin-top: 7.3rem;
+}
+
+.title {
+  font-size: 4.8rem;
+}
+
+@media screen and (max-width: 990px) {
+  .title {
+    font-size: 3.8rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .title {
+    font-size: 3rem;
+  }
+}
+
+.titleDescription {
+  color: #8e979f;
+}
+
+.rolContainer {
+  height: 8.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (max-width: 1050px) {
+  .rolContainer {
+    height: 13rem;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .rolContainer {
+    height: 9rem;
+  }
+}
+
+.rolWord {
+  display: block;
+  position: absolute;
+  width: 100%;
+}

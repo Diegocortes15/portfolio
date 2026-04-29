@@ -1,0 +1,195 @@
+.navBar {
+  padding: 1rem 1.5rem;
+  position: absolute;
+  display: flex;
+  min-width: 100%;
+  z-index: 1000;
+  justify-content: space-between;
+  align-items: center;
+  background: #00070e;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.navBar::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(0, 128, 255, 0.113) 0%, transparent 100%);
+}
+
+@media screen and (max-width: 768px) {
+  .navBar {
+    padding: 2rem 2rem;
+    position: fixed;
+  }
+}
+
+.bgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100vh;
+  z-index: -1;
+  background-image: url(/images/bg-image-2.jpg);
+}
+
+.bgVideoContent {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.brand {
+  color: white;
+  z-index: 1500;
+}
+
+.navList {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  z-index: 1500;
+}
+
+@media screen and (max-width: 768px) {
+  .navList {
+    display: none;
+  }
+}
+
+.navLink {
+  color: #f7f7f7;
+  font-size: 2.2rem;
+  display: inline-block;
+  background-size: 225%;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, transparent 0%);
+  transition: all 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.navLink:hover,
+.navLink:active,
+.navLink:focus {
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 0%);
+  outline: none;
+  background-position: 100%;
+  color: #00070d;
+  transform: translateX(0.5rem);
+}
+
+.menuButton {
+  position: relative;
+  display: none;
+  z-index: 1500;
+  color: white;
+  background: none;
+  border: none;
+  padding: 0;
+  align-items: center;
+  width: 3rem;
+  height: 3rem;
+}
+
+.menuButton:hover {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .menuButton {
+    display: flex;
+  }
+}
+
+.menuIcon,
+.menuIcon::before,
+.menuIcon::after {
+  display: inline-block;
+  width: 3rem;
+  height: 0.3rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10rem;
+  transition: all 0.3s ease;
+}
+
+.menuIcon {
+  position: relative;
+}
+
+.menuIcon::before {
+  content: '';
+  position: absolute;
+  top: -1rem;
+}
+
+.menuIcon::after {
+  content: '';
+  position: absolute;
+  top: 1rem;
+}
+
+.menuButton:hover .menuIcon::before { top: -1.3rem; }
+.menuButton:hover .menuIcon::after { top: 1.3rem; }
+
+.menuIconOpen { background-color: transparent; }
+.menuIconOpen::before { top: 0; transform: rotate(135deg); }
+.menuIconOpen::after { top: 0; transform: rotate(-135deg); }
+
+.mobileOverlay {
+  height: 100vh;
+  position: fixed;
+  width: 100%;
+  z-index: 1400;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.mobileVideoBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 0;
+  object-fit: cover;
+  background-image: url(/images/bg-image-2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.mobileList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 1rem;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+.mobileLink {
+  display: inline-block;
+  padding: 1rem 4rem;
+  color: white;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 0%);
+  background-size: 225%;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+}
+
+.mobileLink:hover,
+.mobileLink:focus,
+.mobileLink:active {
+  outline: none;
+  background-position: 100%;
+  color: #00070d;
+  transform: translateX(0.5rem);
+}

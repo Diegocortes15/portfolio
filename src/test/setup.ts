@@ -13,6 +13,6 @@ class IntersectionObserverMock {
 }
 
 if (typeof globalThis.IntersectionObserver === 'undefined') {
-  // @ts-expect-error - assigning mock to global
+  // @ts-ignore - assigning mock to global
   globalThis.IntersectionObserver = IntersectionObserverMock;
 }

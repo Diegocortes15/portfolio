@@ -1,0 +1,41 @@
+.footer {
+  background-color: #000408;
+}
+
+.socialContent {
+  margin-top: 10rem;
+}
+
+.socialTitle {
+  font-size: 2.25rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+}
+
+.contactItem {
+  display: inline;
+  overflow-wrap: break-word;
+  margin: 0.2rem 0;
+}
+
+.contactLink {
+  color: hwb(193 0% 21%);
+  font-size: 2rem;
+}
+
+.contactIcon {
+  width: 2.2rem;
+  margin-right: 0.9rem;
+}
+
+.copy {
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+  font-size: 1.4rem;
+  color: #8e979f;
+}

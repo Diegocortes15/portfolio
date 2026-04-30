@@ -1,5 +1,5 @@
 import { useMotionValue, useTransform, motion } from 'framer-motion';
-import type { Project } from '../data/projects';
+import type { Project } from '../../data/projects';
 import styles from './ProjectCard.module.css';
 
 type Props = {

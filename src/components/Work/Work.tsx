@@ -1,5 +1,5 @@
-import { projects } from '../data/projects';
-import ProjectCard from './ProjectCard';
+import { projects } from '../../data/projects';
+import ProjectCard from '../ProjectCard';
 import styles from './Work.module.css';
 
 export default function Work() {

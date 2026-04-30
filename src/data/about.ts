@@ -4,7 +4,8 @@ export const about = {
   email: 'cortesroadiegoalejandro@gmail.com',
   experience: [
     { period: 'July 2022 - January 2023', role: 'Testing Intern at Endava S.A.S.' },
-    { period: 'Dec 2023 - Present', role: 'QA Software Engineer II at Wizeline' },
+    { period: 'Dec 2023 - Jun 2025', role: 'QA Software Engineer at Wizeline' },
+    { period: 'Jul 2025 - Present', role: 'QA Software Engineer II at Everis' },
   ],
   education: [
     { year: '2020 - 2021', title: 'Udemy - Advanced CSS and Sass: Flexbox, Grid, Animations and More!' },

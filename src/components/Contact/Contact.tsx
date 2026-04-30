@@ -37,7 +37,7 @@ export default function Contact() {
           </ul>
         </div>
         <div className={styles.copy}>
-          <small>© Made by Diego Cortés. Circa 2025.</small>
+          <small>© Made by Diego Cortés. Circa 2026.</small>
         </div>
       </div>
     </footer>

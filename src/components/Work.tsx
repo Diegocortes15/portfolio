@@ -20,17 +20,17 @@ export default function Work() {
         </div>
       </div>
 
-      <ul className={`${styles.projects} ${styles.automationMark}`}>
+      <div className={`${styles.projects} ${styles.automationMark}`}>
         {automation.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}
-      </ul>
+      </div>
 
-      <ul className={`${styles.projects} ${styles.webMark}`}>
+      <div className={`${styles.projects} ${styles.webMark}`}>
         {web.map((project, i) => (
           <ProjectCard key={project.id} project={project} index={i} />
         ))}
-      </ul>
+      </div>
 
       <a href="#about" className="down-arrow" tabIndex={0} />
     </section>

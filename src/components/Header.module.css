@@ -57,6 +57,7 @@
 }
 
 .rolContainer {
+  display: block;
   height: 8.5rem;
   overflow: hidden;
   position: relative;

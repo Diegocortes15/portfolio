@@ -42,7 +42,7 @@ export default function Header() {
           </h1>
 
           <h1 className={`margin-bottom-15 ${styles.title}`}>
-            <div className={styles.rolContainer}>
+            <span className={styles.rolContainer}>
               <AnimatePresence mode="wait">
                 <motion.span
                   key={roleIndex}
@@ -55,7 +55,7 @@ export default function Header() {
                   {roles[roleIndex]}
                 </motion.span>
               </AnimatePresence>
-            </div>
+            </span>
           </h1>
 
           <p className={`${styles.titleDescription}`}>Let me show you...</p>

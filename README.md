@@ -1,77 +1,91 @@
-# Portfolio
+<h1 align="center">Hi, I'm Diego Cortés 😀</h1>
+<h3 align="center">QA Software Engineer II · Multimedia Engineer · Colombia 🇨🇴 </h3>
 
-cortesroadiegoalejandro@gmail.com  ·  (57) 311 2482055  ·  [/in/diegocortesroa/](https://www.linkedin.com/in/diegocortesroa/) ·  [diegocortes15.github.io/portfolio/](https://diegocortes15.github.io/portfolio/)
+<p align="center">
+ <a href="mailto:cortesroadiegoalejandro@gmail.com">📧 cortesroadiegoalejandro@gmail.com</a> &nbsp;·&nbsp;
+ <a href="https://diegocortes15.vercel.app" target="_blank">💼 Portfolio</a> &nbsp;·&nbsp;
+ <a href="https://diegocortes15.vercel.app" target="_blank">🌐 /in/diegocortesroa/</a> &nbsp;·&nbsp;
+ <snap>📞 +57 311 2482055</snap>
+</p>
 
-# DIEGO ALEJANDRO CORTÉS ROA
-CV: [Diego_Cortes_Resume.pdf](https://github.com/Diegocortes15/Diegocortes15/files/12666719/Diego_Cortes_Resume.pdf)
+---
 
-## TEST AUTOMATION ENGINEER
-Passionate about test automation with experience in designing and developing manual tests and automation scripts. Successfully automated numerous test cases, improving test coverage and efficiency. Skilled at collaborating with teams to streamline test execution. Committed to continuous learning and enhancing automation skills. Dedicated to making a significant impact in organizations by delivering outstanding achievements and contributing to team success.
+I'm a **QA Software Engineer in Test** with 3+ years of experience designing and building test automation frameworks.
+I've worked across Selenium, Playwright, Cypress, WebDriverIO, Appium, and SerenityJS
 
-<!--
-**Diegocortes15/Diegocortes15** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+- always focused on clean architecture (Page Object Model based on Components) and solid CI/CD integration.
 
-Here are some ideas to get you started:
+Alongside QA, I have a background in **Multimedia Engineering** and enjoy building frontend projects with React,
+TypeScript, and modern CSS.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+- 🔭 Currently at **Wizeline** <img src="https://github.com/wizeline.png?size=20" alt="Wizeline"/>  as QA Software Engineer II
+- 🎓 Bachelor of Multimedia Engineering — Universidad Militar Nueva Granada
+- 💡 Strong believer in test architecture patterns: POM, Screenplay, BDD
+- ⚙️ CI/CD experience with GitHub Actions, Azure Pipelines, and Jenkins
 
--->
-<a href="https://github.com/Diegocortes15" target="_blank">
- 
+---
+<div>
+<div align="left">
+
   <div>
-      <img height="180em" src="https://github-readme-stats.vercel.app/api?username=diegocortes15&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-      <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=diegocortes15&layout=compact&langs_count=7&theme=radical"/>    
+    <h3>🧪 Test Automation</h3>
+    <div>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/selenium/selenium-original.svg" alt="Selenium" title="Selenium"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/playwright/playwright-original.svg" alt="Playwright" title="Playwright"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cypressio/cypressio-original.svg" alt="Cypress" title="Cypress"/>
+      <img height="40" src="https://avatars.githubusercontent.com/u/6512473?s=200&v=4" alt="WebDriverIO" title="WebDriverIO"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg" alt="Postman" title="Postman"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" title="Java"/>
+      <img height="40" src="https://bestofjs.org/logos/axios.dark.svg" alt="Axios" title="Axios">
+    </div>
   </div>
 
-  <h3 align="left">Languages and Tools</h3>
-  <div style="display: inline_block"><br>
-    <img align="center" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="javascript">
-    <img align="center" height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/99ba2376-4671-4c31-9cfb-4827511cfb88" alt="typescript">
-    <img align="center" height="40" src="https://user-images.githubusercontent.com/60171460/197628797-2b34b8b4-de79-431c-b002-79d7fd247dde.svg" alt="playwright">
-    <img align="center" height="40" src="https://asset.brandfetch.io/idV7ZoyErg/idTRnjKtRG.png" alt="webdriverio">
-    <img align="center" height="40" src="https://user-images.githubusercontent.com/60171460/197628903-2fb455b3-08a5-4524-8f34-6a330e3601c6.svg" alt="cypress">
-    <img align="center" height="40" src="https://bestofjs.org/logos/axios.dark.svg" alt="axiosjs">
-    <img align="center" height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/7d951e37-24cf-43f5-9a3e-b65a3550d76a" alt="java">
-    <img align="center" height="40" src="https://user-images.githubusercontent.com/60171460/197627839-5139d580-102f-42a1-848f-fcde014b5e93.svg" alt="selenium">
-    <img align="center" height="40" src="https://avatars.githubusercontent.com/u/19369327?s=280&v=4" alt="rest-assured"/>
-    <img align="center" height="40" src="https://avatars.githubusercontent.com/u/5879127?s=200&v=4" alt="allure-report">
-    <img align="center" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="html">
-    <img align="center" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="css">
-    <img align="center" height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="sass">
-    <img align="center" height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/c4f87cc5-bb31-4d5a-a052-20ccb96c1234" alt="git">
-    <img align="center" height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/9f65a3e9-532c-457f-837c-0aa3f1238267" alt="github">
-    <img align="center" height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/100db76c-af70-478b-a4ee-52091397da07" alt="azurepipeline">
-    <img align="center" height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/38c59e53-8990-45fd-83da-567e5a2a163b" alt="jenkins">
-    <img align="center" height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/df5277e5-d655-46bf-a616-4d8054782ba7" alt="docker">
-    <br><br>
+  <div>
+    <h3>🌐 Web Development</h3>
+    <div>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" title="React"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" title="JavaScript"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" title="HTML5"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" title="CSS3"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg" alt="SASS" title="SASS"/>
+    </div>
+  </div>
+
+  <div>
+    <h3>⚙️ CI/CD & Tools</h3>
+    <div>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub"   title="GitHub"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/githubactions/githubactions-original.svg" alt="GitHub Actions" title="GitHub Actions"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" alt="Azure Pipelines" title="Azure Pipelines"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" alt="Jenkins" title="Jenkins"/>
+      <img height="40" src="https://github.com/Diegocortes15/Diegocortes15/assets/60171460/df5277e5-d655-46bf-a616-4d8054782ba7" alt="Docker" title="Docker">
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-original.svg" alt="JIRA" title="JIRA"/>
+      <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" title="MySQL"/>
+    </div>
+  </div>
+
+</div>
+ 
+  <div style="display: inline_block">
     <img align="right" alt="Rafa-pic" height="150" style="border-radius:50px;" src="https://user-images.githubusercontent.com/60171460/215353307-e366f881-bb80-45d3-92db-0bb1435dd036.jpg?width=676&height=676">
-   
   </div>
-</a>  
+</div>
 
-## 
+##
 
 <div>
-  
   <a href="mailto: cortesroadiegoalejandro@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
   </a>
-    
+
   <a href="https://github.com/Diegocortes15" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
   </a>
-  
+
   <a href="https://www.linkedin.com/in/diego-alejandro-cort%C3%A9s-roa-3aab85208/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white">
   </a>
-  
 </div>
 
-  ![github-contribution-grid-snake](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg)
+![github-contribution-grid-snake](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg)

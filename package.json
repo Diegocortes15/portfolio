@@ -13,9 +13,11 @@
   "author": "Diego Alejandro Cortes Roa",
   "license": "ISC",
   "dependencies": {
-    "framer-motion": "^11.0.0",
+    "@tailwindcss/vite": "^4.3.0",
+    "lucide-react": "^1.17.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.4.2",

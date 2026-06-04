@@ -1,45 +1,52 @@
-import styles from './Contact.module.css';
+/* Contact — direct links only (email, LinkedIn, GitHub). No form/backend. */
+import { links } from "../../config/portfolio.config";
+import { useI18n } from "../../lib/i18n";
+import Icon from "../Icon";
 
-const socials = [
-  {
-    label: 'in/diegocortesroa/',
-    href: 'https://www.linkedin.com/in/diegocortesroa/',
-    icon: 'fa-brands fa-linkedin-in',
-  },
-  {
-    label: 'Diegocortes15',
-    href: 'https://github.com/Diegocortes15',
-    icon: 'fa-brands fa-github',
-  },
-];
+interface ContactLink {
+  ic: string;
+  label: string;
+  href: string;
+  external: boolean;
+}
 
 export default function Contact() {
+  const { t } = useI18n();
+  const c = t.contact;
+
+  const items: ContactLink[] = [
+    { ic: "mail", label: links.email, href: "mailto:" + links.email, external: false },
+    { ic: "linkedin", label: "linkedin.com/in/diegocortesroa", href: links.linkedin, external: true },
+    { ic: "github", label: "github.com/Diegocortes15", href: links.github, external: true },
+  ];
+
   return (
-    <footer className={styles.footer} id="contact">
-      <div className="footer__content container">
-        <div className="timeline" />
-        <div className="section__header">
-          <div className="section__title bullet__title">
-            <small>Contact</small>
+    <section className="section contact" id="contact">
+      <div className="wrap">
+        <div className="contact-card reveal lume-host">
+          <span className="lume" aria-hidden="true" />
+          <span className="kicker" style={{ justifyContent: "center", display: "flex" }}>
+            {c.kicker}
+          </span>
+          <h2>{c.title}</h2>
+          <p>{c.sub}</p>
+          <div className="contact-links">
+            {items.map((l) => (
+              <a
+                key={l.ic}
+                className="clink lume-host"
+                href={l.href}
+                target={l.external ? "_blank" : undefined}
+                rel={l.external ? "noopener noreferrer" : undefined}
+              >
+                <span className="lume" aria-hidden="true" />
+                <Icon name={l.ic} />
+                {l.label}
+              </a>
+            ))}
           </div>
         </div>
-        <div className={`section__content ${styles.socialContent}`}>
-          <h2 className={styles.socialTitle}>Find me on:</h2>
-          <ul className={styles.contactList}>
-            {socials.map(({ label, href, icon }) => (
-              <li key={label} className={styles.contactItem}>
-                <a className={styles.contactLink} href={href} target="_blank" rel="noreferrer">
-                  <i className={`${icon} ${styles.contactIcon}`} />
-                  {label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className={styles.copy}>
-          <small>© Made by Diego Cortés. Circa 2026.</small>
-        </div>
       </div>
-    </footer>
+    </section>
   );
 }

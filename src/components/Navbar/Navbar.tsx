@@ -1,78 +1,57 @@
-import { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
-import styles from './Navbar.module.css';
-
-const navLinks = [
-  { label: 'Start', href: '#start' },
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
-];
+/* Navbar — fixed top bar: brand, section anchors, theme picker, language
+ * toggle and a primary Contact CTA. Gains a frosted background once scrolled. */
+import { useEffect, useState } from "react";
+import { useI18n } from "../../lib/i18n";
+import Icon from "../Icon";
+import LangToggle from "./LangToggle";
 
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const { t } = useI18n();
+  const [stuck, setStuck] = useState(false);
 
-  const closeMenu = () => setIsOpen(false);
+  useEffect(() => {
+    const onScroll = () => setStuck(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const links: [string, string, string][] = [
+    ["work", t.nav.work, "01"],
+    ["skills", t.nav.skills, "02"],
+    ["experience", t.nav.experience, "04"],
+    ["contact", t.nav.contact, "05"],
+  ];
 
   return (
-    <nav className={styles.navBar}>
-      <div className={styles.bgVideo}>
-        <video
-          className={styles.bgVideoContent}
-          preload="auto"
-          poster="/images/bg-image-2.jpg"
-          autoPlay
-          muted
-          loop
-        >
-          <source src="/video/bg-video-2.mp4" type="video/mp4" />
-        </video>
+    <nav className={"nav" + (stuck ? " stuck" : "")}>
+      <div className="wrap nav-in">
+        <a href="#top" className="brand">
+          <span className="brand-mark">✓</span>
+          <span>
+            <b>diego.cortes</b>
+            <span className="sep"> · </span>
+            <span className="role">qa.sdet</span>
+          </span>
+        </a>
+        <div className="nav-links">
+          {links.map(([id, label, num]) => (
+            <a key={id} href={"#" + id} className="nav-link">
+              <span className="nav-num">{num}</span>
+              {label}
+            </a>
+          ))}
+        </div>
+        <div className="nav-right">
+          {/* Accent theme picker hidden by request — site is locked to one accent
+              (see defaultAccent in portfolio.config.ts). Re-add <ThemePicker /> here to restore it. */}
+          <LangToggle />
+          <a href="#contact" className="btn btn-primary" style={{ padding: "10px 16px" }}>
+            {t.navLabel}
+            <Icon name="arrow" />
+          </a>
+        </div>
       </div>
-
-      <a href="https://github.com/Diegocortes15/" target="_blank" rel="noreferrer" className={styles.brand}>
-        <i className="fa-brands fa-github" /> Diegocortes15
-      </a>
-
-      <ul className={styles.navList}>
-        {navLinks.map(({ label, href }) => (
-          <li key={label}>
-            <a className={styles.navLink} href={href}>{label}</a>
-          </li>
-        ))}
-      </ul>
-
-      <button
-        className={styles.menuButton}
-        onClick={() => setIsOpen((prev) => !prev)}
-        aria-label={isOpen ? 'Close menu' : 'Open menu'}
-      >
-        <span className={`${styles.menuIcon} ${isOpen ? styles.menuIconOpen : ''}`} />
-      </button>
-
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className={styles.mobileOverlay}
-            initial={{ opacity: 0, width: 0 }}
-            animate={{ opacity: 1, width: '100%' }}
-            exit={{ opacity: 0, width: 0 }}
-            transition={{ duration: 0.5, ease: [0.68, -0.55, 0.265, 1.55] }}
-          >
-            <video className={styles.mobileVideoBg} autoPlay muted loop>
-              <source src="/video/bg-video-2.mp4" type="video/mp4" />
-            </video>
-            <ul className={styles.mobileList}>
-              {navLinks.map(({ label, href }, i) => (
-                <li key={label}>
-                  <a className={styles.mobileLink} href={href} onClick={closeMenu}>
-                    0{i + 1} {label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </nav>
   );
 }

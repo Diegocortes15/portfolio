@@ -13,8 +13,11 @@ export default function Hero() {
         <div>
           <div className="hero-status reveal">
             <span className="badge-pass">{h.deploy}</span>
-            <span className="dot pass" /> {h.status}
-            <span style={{ color: "var(--ink-faint)" }}>· main@a1f3c9</span>
+            <span className="hs-state">
+              <span className="dot pass" />
+              {h.status}
+            </span>
+            <span className="hs-ref">· main@a1f3c9</span>
           </div>
           <h1 className="reveal" style={{ transitionDelay: ".05s" }}>
             {h.h1a}

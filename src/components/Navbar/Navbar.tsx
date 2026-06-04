@@ -46,8 +46,8 @@ export default function Navbar() {
           {/* Accent theme picker hidden by request — site is locked to one accent
               (see defaultAccent in portfolio.config.ts). Re-add <ThemePicker /> here to restore it. */}
           <LangToggle />
-          <a href="#contact" className="btn btn-primary" style={{ padding: "10px 16px" }}>
-            {t.navLabel}
+          <a href="#contact" className="btn btn-primary nav-cta" aria-label={t.navLabel}>
+            <span className="nav-cta-label">{t.navLabel}</span>
             <Icon name="arrow" />
           </a>
         </div>

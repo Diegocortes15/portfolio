@@ -6,6 +6,7 @@ import Icon from "../Icon";
 interface ContactLink {
   ic: string;
   label: string;
+  short: string;
   href: string;
   external: boolean;
 }
@@ -14,10 +15,11 @@ export default function Contact() {
   const { t } = useI18n();
   const c = t.contact;
 
+  // `label` shows on desktop; `short` keeps the buttons equal-width on mobile.
   const items: ContactLink[] = [
-    { ic: "mail", label: links.email, href: "mailto:" + links.email, external: false },
-    { ic: "linkedin", label: "linkedin.com/in/diegocortesroa", href: links.linkedin, external: true },
-    { ic: "github", label: "github.com/Diegocortes15", href: links.github, external: true },
+    { ic: "mail", label: links.email, short: "Email", href: "mailto:" + links.email, external: false },
+    { ic: "linkedin", label: "linkedin.com/in/diegocortesroa", short: "LinkedIn", href: links.linkedin, external: true },
+    { ic: "github", label: "github.com/Diegocortes15", short: "GitHub", href: links.github, external: true },
   ];
 
   return (
@@ -36,12 +38,14 @@ export default function Contact() {
                 key={l.ic}
                 className="clink lume-host"
                 href={l.href}
+                title={l.label}
                 target={l.external ? "_blank" : undefined}
                 rel={l.external ? "noopener noreferrer" : undefined}
               >
                 <span className="lume" aria-hidden="true" />
                 <Icon name={l.ic} />
-                {l.label}
+                <span className="clink-full">{l.label}</span>
+                <span className="clink-short">{l.short}</span>
               </a>
             ))}
           </div>

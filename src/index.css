@@ -279,6 +279,11 @@ button { font-family: inherit; cursor: pointer; }
   height: 72px;
   border-color: var(--pass);
 }
+/* Never show the custom cursor on touch / coarse-pointer devices. */
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot,
+  .cursor-ring { display: none !important; }
+}
 
 /* ---------------------------------------------------------- *
    Reveal-on-scroll
@@ -388,6 +393,7 @@ button { font-family: inherit; cursor: pointer; }
 .nav-num { color: var(--ink-faint); margin-right: 6px; }
 
 .nav-right { display: flex; align-items: center; gap: 14px; }
+.nav-cta { padding: 10px 16px; }
 
 /* language switch */
 .lang {
@@ -451,8 +457,10 @@ button { font-family: inherit; cursor: pointer; }
  * ---------------------------------------------------------- */
 .hero { position: relative; padding: 168px 0 96px; }
 .hero-grid { display: grid; grid-template-columns: 1.18fr 0.82fr; gap: 56px; align-items: center; }
-.hero-status { display: inline-flex; align-items: center; gap: 9px; font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-mute); margin-bottom: 26px; }
+.hero-status { display: inline-flex; align-items: center; flex-wrap: wrap; gap: 9px; row-gap: 7px; font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-mute); margin-bottom: 26px; }
 .hero-status .badge-pass { font-size: 10.5px; }
+.hero-status .hs-state { display: inline-flex; align-items: center; gap: 9px; white-space: nowrap; }
+.hero-status .hs-ref { white-space: nowrap; color: var(--ink-faint); }
 .hero h1 {
   font-family: var(--font-display); font-weight: 700;
   font-size: clamp(40px, 6.6vw, 78px); line-height: 0.98; letter-spacing: -0.03em;
@@ -705,6 +713,7 @@ button { font-family: inherit; cursor: pointer; }
 .clink svg { width: 17px; height: 17px; color: var(--pass); transition: transform .22s; }
 .clink:hover { border-color: var(--pass); background: var(--pass-dim); transform: translateY(-2px); box-shadow: 0 14px 30px -16px var(--pass-glow); }
 .clink:hover svg { transform: translateX(2px); }
+.clink-short { display: none; } /* shown only on mobile (see media query) */
 
 /* ---------------------------------------------------------- *
    Footer
@@ -842,4 +851,17 @@ button { font-family: inherit; cursor: pointer; }
   .fw-modal { padding: 22px 18px 26px; }
   .more-frameworks { flex-direction: row; padding: 16px; }
   .mf-s { font-size: 10.5px; }
+
+  /* Header: keep the Contact CTA but make it a compact icon-only button so the
+     bar (brand + language toggle + CTA) fits without overflow. */
+  .nav-right { gap: 10px; }
+  .nav-cta { padding: 9px 11px; }
+  .nav-cta-label { display: none; }
+
+  /* Contact: equal-width stacked buttons with short labels. */
+  .contact-card { padding: 44px 22px; }
+  .contact-links { flex-direction: column; align-items: stretch; }
+  .clink { width: 100%; justify-content: center; }
+  .clink-full { display: none; }
+  .clink-short { display: inline; }
 }

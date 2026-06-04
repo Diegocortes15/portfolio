@@ -4,19 +4,28 @@
  *
  * Self-disables (renders nothing, native cursor stays) on touch/coarse pointers
  * and when the user prefers reduced motion. No animation library needed. */
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const HOVER_TARGETS = "a, button, label";
 const RING_LERP = 0.2;
 
+/** Only enable the custom cursor on devices with a fine pointer + hover (i.e.
+ * not touch) and when reduced motion isn't requested. */
+function cursorEnabled(): boolean {
+  if (typeof window === "undefined" || !window.matchMedia) return false;
+  return (
+    window.matchMedia("(hover: hover) and (pointer: fine)").matches &&
+    !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+}
+
 export default function Cursor() {
+  const [enabled] = useState(cursorEnabled);
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (!finePointer || reduced) return;
+    if (!enabled) return;
 
     const dot = dotRef.current;
     const ring = ringRef.current;
@@ -78,7 +87,9 @@ export default function Cursor() {
       document.removeEventListener("mouseenter", onEnter);
       document.body.classList.remove("has-custom-cursor");
     };
-  }, []);
+  }, [enabled]);
+
+  if (!enabled) return null;
 
   return (
     <>

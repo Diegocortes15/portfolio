@@ -1,0 +1,89 @@
+/* Cursor — custom pointer: a solid dot that tracks the mouse exactly plus a
+ * ring that trails with spring-like lag and grows when hovering interactive
+ * elements. Uses mix-blend-mode: difference so it reads on any background.
+ *
+ * Self-disables (renders nothing, native cursor stays) on touch/coarse pointers
+ * and when the user prefers reduced motion. No animation library needed. */
+import { useEffect, useRef } from "react";
+
+const HOVER_TARGETS = "a, button, label";
+const RING_LERP = 0.2;
+
+export default function Cursor() {
+  const dotRef = useRef<HTMLDivElement>(null);
+  const ringRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!finePointer || reduced) return;
+
+    const dot = dotRef.current;
+    const ring = ringRef.current;
+    if (!dot || !ring) return;
+
+    document.body.classList.add("has-custom-cursor");
+
+    // Start off-screen until the first move.
+    let mouseX = -100;
+    let mouseY = -100;
+    let ringX = -100;
+    let ringY = -100;
+
+    const place = (el: HTMLElement, x: number, y: number) => {
+      el.style.transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`;
+    };
+
+    const onMove = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      place(dot, mouseX, mouseY);
+    };
+    const onOver = (e: MouseEvent) => {
+      if ((e.target as Element).closest?.(HOVER_TARGETS)) ring.classList.add("hover");
+    };
+    const onOut = (e: MouseEvent) => {
+      if ((e.target as Element).closest?.(HOVER_TARGETS)) ring.classList.remove("hover");
+    };
+    const onLeave = () => {
+      dot.style.opacity = "0";
+      ring.style.opacity = "0";
+    };
+    const onEnter = () => {
+      dot.style.opacity = "1";
+      ring.style.opacity = "1";
+    };
+
+    let raf = 0;
+    const tick = () => {
+      ringX += (mouseX - ringX) * RING_LERP;
+      ringY += (mouseY - ringY) * RING_LERP;
+      place(ring, ringX, ringY);
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseover", onOver);
+    document.addEventListener("mouseout", onOut);
+    document.addEventListener("mouseleave", onLeave);
+    document.addEventListener("mouseenter", onEnter);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseover", onOver);
+      document.removeEventListener("mouseout", onOut);
+      document.removeEventListener("mouseleave", onLeave);
+      document.removeEventListener("mouseenter", onEnter);
+      document.body.classList.remove("has-custom-cursor");
+    };
+  }, []);
+
+  return (
+    <>
+      <div ref={dotRef} className="cursor-dot" aria-hidden="true" />
+      <div ref={ringRef} className="cursor-ring" aria-hidden="true" />
+    </>
+  );
+}

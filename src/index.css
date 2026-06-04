@@ -241,6 +241,46 @@ button { font-family: inherit; cursor: pointer; }
 @keyframes blink { 50% { opacity: 0; } }
 
 /* ---------------------------------------------------------- *
+   Custom cursor — solid dot + trailing ring that grows on hover.
+   Activated by the Cursor component (which adds .has-custom-cursor).
+ * ---------------------------------------------------------- */
+.has-custom-cursor,
+.has-custom-cursor a,
+.has-custom-cursor button,
+.has-custom-cursor label,
+.has-custom-cursor [role="button"] { cursor: none; }
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9950;
+  mix-blend-mode: difference;
+  will-change: transform;
+  transition: opacity .25s ease;
+}
+.cursor-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+}
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+  transition: width .22s var(--ease), height .22s var(--ease), opacity .25s ease;
+}
+.cursor-ring.hover {
+  width: 72px;
+  height: 72px;
+  border-color: var(--pass);
+}
+
+/* ---------------------------------------------------------- *
    Reveal-on-scroll
  * ---------------------------------------------------------- */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }

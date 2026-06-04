@@ -2,6 +2,7 @@
  * Content lives in src/config/portfolio.config.ts; providers are wired in
  * main.tsx. */
 import { useEffect, useState } from "react";
+import Cursor from "./components/Cursor";
 import Atmosphere from "./components/Atmosphere";
 import Preloader from "./components/Preloader";
 import Navbar from "./components/Navbar";
@@ -24,6 +25,7 @@ export default function App() {
 
   return (
     <>
+      <Cursor />
       <Atmosphere />
       {booting && <Preloader onDone={() => setBooting(false)} />}
       <div aria-hidden={booting}>
